@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- -----------------------*******------------------------ -->
+
+<section id="showcase-inner" class="py-5 text-white" >
+    <div class="container">
+      <div class="row text-center text-dark">
+        <div class="col-md-12">
+          <h1 class="display-4 " style="margin-top: 100px;">National Population Commision Owerri</h1>
+          <p class="lead">Child Data</p>
+
+        </div>
+      </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="container mt-5 py-5 pb-5 mb-5">
+<h1><a href="{% url 'viewchild' %}" type="button" class="btn btn-dark">Go back</a> </h1>
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="row">
+                    
+                    <!-- /.card-header -->
+                    <div class="col-md-6">
+                            <h3>Cetificate id {{assigns.certificate_no}}</h3> 
+                            <h3>First name: {{assigns.first_name}}</h3>
+                            <h3>Last name: {{assigns.last_name}}</h3>
+                            <h3>Other name: {{assigns.other_name}}</h3>
+                            <h3>Gender: {{assigns.gender}}</h3>
+                            <h3>Dob: {{assigns.date_of_birth}}</h3>
+                            <h3>State of Origin: {{assigns.state_of_origin}}</h3>
+                            <h3>Lga of origin: {{assigns.lga_of_origin}}</h3>
+                                                                               
+
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Mother Name: {{assigns.mother_name}}</h3>
+                        <h3>Father Name: {{assigns.father_name}}</h3>
+                        <h3>Town of Birth: {{assigns.town_of_birth}}</h3>
+                        <h3>LGA of Birth: {{assigns.lga_of_birth}}</h3>
+                        <h3>State of Birth: {{assigns.state_of_birth}}</h3>
+                        <h3>State of Birth: {{assigns.state_of_birth}}</h3>
+                        <h3>Place of Issue: {{assigns.place_of_issue}}</h3>
+                        <h3>Authorised By: {{assigns.Authorised_by}}</h3>
+                        <h3>Registration Center: {{assigns.reg_center}}</h3> 
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    
+  
+    
+  
+    </div>
+  </div>
+
+
+  {% endblock %}

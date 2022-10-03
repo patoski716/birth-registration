@@ -1,0 +1,26 @@
+{% load static %}
+<header>			
+    <nav hidden class="nav-white nav-transparent full-width">
+        <div class="nav-header">
+            <a href="{% url 'home' %}" class="brand">
+                <H3>NPCO</H3>
+            </a>
+            <button class="toggle-bar">
+                <span class="ti-menu"></span>
+            </button>	
+        </div>								
+        <ul class="menu">
+            <li class="scrollspy active"><a href="{% url 'home' %}">Home</a></li>
+             
+            {% if request.user.is_authenticated %}
+            <li class="scrollspy"><a href="{% url 'dashboard' %}">Dashboard</a></li>
+            <li class="scrollspy"><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+            <li class="scrollspy"><a href="{% url 'login' %}">Staff Login</a></li>
+            <li class="scrollspy"><a href="{% url 'register' %}">Staff Register</a></li>
+            {% endif %}
+            
+        </ul>
+        
+    </nav>
+</header>
